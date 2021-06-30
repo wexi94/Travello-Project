@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+ <form action="{% url 'add' %}" method="post">
+     {% csrf_token %}
+    Enter 1st Number : <input type="number" name="num1"><br>
+    Enter 2nd Number : <input type="number" name="num2"><br>
+    <input type="submit">
+ </form>
+{% endblock %}
